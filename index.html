@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Fit to the bounds of a LineString</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant&family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="map-container">
+    <div class="section-aside d-none" id="section-aside">
+      <div class="card">
+        <div class="card-header" id="card-header">
+          <div class="card-top">
+            <img src="bg_image.jpg" alt="" height="200px" width="100%">
+          </div>
+
+          <section>
+            <h5>country</h5>
+            <h1>Spain</h1>
+            <span class="sub-header">18 Top Destinations | 2,500+ Havens</span>
+          </section>
+
+        </div>
+
+        <article id="article">
+          Sultry flamenco in Madrid, Rioja’s bottles of red, Gaudí’s fantastical buildings—Spain is a kaleidoscope of culture...
+        </article>
+
+        <div class="card-footer">
+          
+          <p>
+            <a href="/search?gplaceid=ChIJi7xhMnjjQgwR7KNoB5Qs7KY" class="btn btn-primary" target="_blank" id="place-link">Explore</a>
+          </p>
+          <nav>
+            <button type="button" class="btn-outline" id="prev-dest">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+
+            <span class="destination-index">1 of 19</span>
+            
+            <button type="button" class="btn-outline" id="next-dest">
+              <i class="fa fa-chevron-right"></i>
+            </button>
+          </nav>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="section-footer" id="section-footer">
+    <h1></h1>
+  </div>
+  <div id="map">
+
+    <div class="history-section">
+      <button id="globe-button">
+        <i class="fa fa-globe"></i>
+      </button>
+
+      <button id="back-button" class="disabled-btn">
+        <i class="fa fa-chevron-up"></i>
+      </button>
+
+      <button id="next-button" class="disabled-btn">
+        <i class="fa fa-chevron-down"></i>
+      </button>
+    </div>
+   
+  </div>
+
+</div>
+
+<script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+<script src="data/papaparse.min.js"></script>
+<script src="centroids.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+body { 
+    margin: 0; 
+    padding: 0; 
+    font-size: 1rem;
+    font-family: 'Cormorant', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.map-container {
+    position: relative;
+}
+
+.section-aside {
+    position: absolute;
+    top:16px;
+    left: 10px;
+
+    width: 304px !important;
+    height: 700px !important;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) !important;
+    z-index: 2;
+
+    transform: scale(0.713115);
+    transform-origin: left top;
+}
+
+.section-aside section {
+    margin-top: 24px !important;
+    margin-left: 24px !important;
+    margin-right: 24px !important;
+
+    font-family: 'Cormorant', serif;
+    font-weight: 600;
+}
+
+.section-aside .card-header .card-top {
+    height: 320px;
+    background-size: cover;
+    background-image: url(bg_image.jpg);
+    border-bottom: 1px solid #ddd;
+
+    background-position: center center !important;
+}
+
+.section-aside section h5 {
+    color: #CEB06B !important;
+    text-transform: uppercase !important;
+    font-size: 15px !important;
+    line-height: 16px !important;
+    margin:0;
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.section-aside section h1 {
+    font-size: 22px !important;
+    line-height: 32px !important;
+    /* margin-bottom: 0 !important; */
+    margin:0.5rem 0;
+}
+
+
+.section-aside  .card-footer {
+    margin: 24px !important;
+    flex-shrink: 0 !important;
+}
+
+.section-aside section span.sub-header {
+    font-size: 15px !important;
+    line-height: 20px !important;
+    text-transform: capitalize !important;
+    white-space: nowrap !important;
+
+    /* font-family: 'Cormorant', serif; */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.section-aside article {
+    flex-shrink: 10 !important;
+    margin-top: 8px !important;
+    margin-left: 24px !important;
+    margin-right: 24px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    font-weight: 200 !important;
+
+    height: 130px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-aside  .card-footer a {
+    width: 100% !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    display: block;
+    color:white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary {
+    background-color: #CEB06B;
+    border-color: #CEB06B;
+}
+
+
+.section-aside .card-footer nav {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify !important;
+    justify-content: space-between !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-aside .card-footer nav button {
+    background-color: #fff !important;
+    border: none !important;
+    cursor: pointer !important;
+
+
+}
+
+.section-aside .card-footer nav span {
+    font-size: 13px !important;
+    line-height: 16px !important;
+    font-weight: 400 !important;
+    align-self: center !important;
+}
+
+#map { 
+    position: relative;
+    height: 100vh; 
+    width: 100%; 
+}
+
+.btn-control {
+    font: bold 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: #3386c0;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    z-index: 1;
+    border: none;
+    width: 200px;
+    margin-left: -100px;
+    display: block;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.btn-control:hover {
+    background-color: #4ea0da;
+}
+
+.section-footer {
+    pointer-events: none !important;
+    position: absolute !important;
+    bottom: 60px !important;
+    right: 0 !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    width: 50% !important;
+    z-index: 1;
+}
+
+.section-footer h1 {
+    color: #6C757D !important;
+    opacity: 0.2 !important;
+    font-family: "adobe-caslon-pro",serif !important;
+    font-size: 64px !important;
+    font-weight: 400 !important;
+    line-height: 72px !important;
+    letter-spacing: 0.08em !important;
+    text-align: right !important;
+    text-transform: uppercase !important;
+    margin-right: 44px !important;
+    margin-bottom: 0 !important;
+    cursor: default !important;
+}
+
+.map-marker-label {
+    color:orange;
+}
+
+.priority.map-marker-label::before  {
+    content: attr(data-tooltip-text);
+    /* content: "Marker"; */
+    /* display: none; */
+    max-width: 130px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    /* pointer-events: none; */
+    color: rgb(108, 117, 125);
+}
+
+.map-marker-label:hover::before {
+    color:white;
+    text-shadow: 0px 0px 4px #222;
+}
+
+
+.marker-select {
+    z-index: 2;
+}
+
+.diamond-icon {
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    margin: 0px auto;
+}
+
+
+.history-section {
+    position: absolute;
+    z-index: 2;
+    right: 0px;
+    top:110px;
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 10px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.1);
+    border-radius: 4px;
+    background-color: white;
+}
+
+.history-section button {
+    background-color: transparent;
+    border: 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 29px;
+    outline: none;
+    overflow: hidden;
+    padding: 0px;
+    width: 29px;
+    margin-top: 1px;
+    color:#333;
+}
+
+.mapboxgl-popup-content {
+    min-width: 60px;
+    padding: 0.25rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:#555;
+}
+
+.history-section button > * {
+    pointer-events: none;
+}
+
+.history-section .disabled-btn {
+    pointer-events: none;
+    color:#b3b3b3;
+}
+
+.history-section button+button {
+    border-top: 1px solid #ddd;
+}
+
+nav.d-none {
+    display: none !important;
+}
+
+.d-none {
+    display: none !important;
+}
