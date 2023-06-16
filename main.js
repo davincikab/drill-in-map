@@ -997,13 +997,13 @@ class CustomRegionMarker {
         console.log(destination);
     
 
-        let imageUrl = destination['image'] || 'bg_image.jpg';
+        let imageUrl = destination['image'] || '';
         let titleText = destination.State ? (destination.City || destination.State) : (destination.City || destination.Country);
         let placeType =  destination.State ? 'State' : destination.City ? 'City' : 'Country';
 
         document.getElementById("card-header").innerHTML = `
             <div class="card-top">
-                <img src="${imageUrl}" alt="" height="100%" width="100%">
+                ${imageUrl && `<img src="${imageUrl}" alt="" height="100%" width="100%">` }
             </div>
 
             <section>

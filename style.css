@@ -13,15 +13,15 @@ body {
 .section-aside {
     position: absolute;
     top:16px;
-    left: 10px;
+    left: 16px;
 
-    width: 304px !important;
+    width: 330px !important;
     height: 700px !important;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) !important;
     z-index: 2;
 
-    transform: scale(0.713115);
+    transform: scale(0.80);
     transform-origin: left top;
 }
 
@@ -36,10 +36,10 @@ body {
 
 .section-aside .card-header .card-top {
     height: 320px;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 250px 240px;
     background-image: url(bg_image.jpg);
     border-bottom: 1px solid #ddd;
-
     background-position: center center !important;
 }
 
@@ -75,7 +75,10 @@ body {
 
     /* font-family: 'Cormorant', serif; */
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    /* font-weight: 400; */
+
+    /* font-weight: 500; */
+    color: #4f4949;
 }
 
 .section-aside article {
@@ -86,7 +89,7 @@ body {
     font-size: 14px !important;
     line-height: 20px !important;
     font-weight: 200 !important;
-
+    color: #212529;
     height: 130px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -281,3 +284,16 @@ nav.d-none {
 .d-none {
     display: none !important;
 }
+
+
+@media screen and (max-width:1024px) {
+    .section-aside {
+        transform: scale(0.7);
+    }
+} 
+
+@media screen and (min-width:1600px) {
+    .section-aside {
+        transform: scale(1.1);
+    }
+}   
